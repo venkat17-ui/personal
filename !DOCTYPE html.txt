@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lavender Sky Love 💜🩵</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#cdb4db,#a2d2ff);
+  font-family:'Playfair Display',serif;
+  overflow:hidden;
+}
+
+/* Background floating love elements */
+.bg-heart{
+  position:absolute;
+  font-size:22px;
+  opacity:0.15;
+  animation:float 15s linear infinite;
+}
+
+.sparkle{
+  position:absolute;
+  font-size:14px;
+  opacity:0.4;
+  animation:twinkle 3s infinite alternate;
+}
+
+@keyframes float{
+  from{transform:translateY(100vh);}
+  to{transform:translateY(-10vh);}
+}
+
+@keyframes twinkle{
+  from{opacity:0.2;}
+  to{opacity:0.8;}
+}
+
+/* Center wrapper */
+.screen{
+  width:100%;
+  max-width:400px;
+  text-align:center;
+  padding:20px;
+  position:relative;
+  z-index:2;
+}
+
+/* First Page */
+.container{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+}
+
+button{
+  padding:10px 25px;
+  border:none;
+  border-radius:25px;
+  cursor:pointer;
+  font-size:16px;
+}
+
+#yesBtn{
+  background:#9b5de5;
+  color:white;
+}
+
+#noBtn{
+  background:#ddd;
+  margin-left:15px;
+  position:relative;
+}
+
+/* Envelope Page */
+#envelopePage{
+  display:none;
+}
+
+.loveTitle{
+  font-family:'Great Vibes',cursive;
+  font-size:48px;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#ff4d6d,#9b5de5,#00b4d8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Envelope */
+.envelope{
+  width:220px;
+  height:140px;
+  background:white;
+  margin:auto;
+  position:relative;
+  border-radius:8px;
+  cursor:pointer;
+  overflow:hidden;
+}
+
+.flap{
+  position:absolute;
+  width:100%;
+  height:70px;
+  background:#d0bfff;
+  top:0;
+  transition:0.8s;
+}
+
+.letter{
+  position:absolute;
+  width:90%;
+  height:80%;
+  background:white;
+  top:100%;
+  left:5%;
+  border-radius:6px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:14px;
+  transition:0.8s;
+}
+
+.open .flap{ top:-70px; }
+.open .letter{ top:10%; }
+
+/* Final Page */
+#finalPage{
+  display:none;
+  width:100%;
+  max-width:400px;
+  text-align:center;
+}
+
+#finalPage h1{
+  font-family:'Great Vibes',cursive;
+  font-size:52px;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,#ff758f,#9b5de5,#00b4d8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Glowing White Body Text */
+#finalPage p{
+  line-height:1.9;
+  color:white;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #cdb4db,
+    0 0 30px #a2d2ff;
+}
+
+/* Foreground floating hearts */
+.heart{
+  position:absolute;
+  bottom:-20px;
+  font-size:20px;
+  animation:rise 6s linear infinite;
+}
+
+@keyframes rise{
+  to{
+    transform:translateY(-110vh);
+    opacity:0;
+  }
+}
+
+/* Petals */
+.petal{
+  position:absolute;
+  top:-20px;
+  font-size:18px;
+  animation:fall linear infinite;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+  }
+}
+
+/* Kiss Burst */
+.kiss{
+  position:absolute;
+  font-size:24px;
+  animation:kissAnim 1s forwards;
+  pointer-events:none;
+}
+
+@keyframes kissAnim{
+  0%{transform:scale(0);opacity:1;}
+  100%{transform:translateY(-80px) scale(1.4);opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="screen">
+
+  <div class="container" id="firstPage">
+    <h2 style="color:#6a4c93;">Will you be my Valentine? 💜</h2>
+    <br>
+    <button id="yesBtn">Yes 😘</button>
+    <button id="noBtn">No 🙈</button>
+  </div>
+
+  <div id="envelopePage">
+    <div class="loveTitle">You made my day 💜</div>
+    <div class="envelope" id="env">
+      <div class="flap"></div>
+      <div class="letter">Click to open your love letter 💌</div>
+    </div>
+  </div>
+
+  <div id="finalPage">
+    <h1>You made my day 💜</h1>
+    <p>
+    Be mine, always 💍❤️<br><br>
+    I always loyal to uuu ✨🫂🫴<br><br>
+    Happy valentine's day 💌💝🌹 porikiiiiiiii wifey ✨💗<br><br>
+    I want more kiss from uuu diiiiii kannama 🎀😘<br><br>
+    U r not a part of my life<br>
+    Ur my entire life 🧬 diiiiii kannama 🎀😘<br><br>
+    ur my kutty papa 💗💕🩵💫<br>
+    and make my papa 💗💕 happy 🌍💖<br><br>
+    <strong>ready for lavender 🪻 colour 🙈🦋💖🌍</strong>
+    </p>
+  </div>
+
+</div>
+
+<script>
+const yes=document.getElementById("yesBtn");
+const no=document.getElementById("noBtn");
+const first=document.getElementById("firstPage");
+const envelopePage=document.getElementById("envelopePage");
+const env=document.getElementById("env");
+const finalPage=document.getElementById("finalPage");
+
+/* Background decorative hearts */
+for(let i=0;i<20;i++){
+  let h=document.createElement("div");
+  h.className="bg-heart";
+  h.innerText=["💜","💖","🩵"][Math.floor(Math.random()*3)];
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(Math.random()*10+8)+"s";
+  document.body.appendChild(h);
+}
+
+for(let i=0;i<15;i++){
+  let s=document.createElement("div");
+  s.className="sparkle";
+  s.innerText="✨";
+  s.style.left=Math.random()*100+"vw";
+  s.style.top=Math.random()*100+"vh";
+  document.body.appendChild(s);
+}
+
+/* NO move */
+no.addEventListener("mouseover",()=>{
+  no.style.position="absolute";
+  no.style.left=Math.random()*150+"px";
+  no.style.top=Math.random()*60+"px";
+});
+
+/* YES click */
+yes.addEventListener("click",()=>{
+  first.style.display="none";
+  envelopePage.style.display="block";
+});
+
+/* Envelope open */
+env.addEventListener("click",()=>{
+  env.classList.add("open");
+
+  const music=new Audio("song.mp3");
+  music.loop=true;
+  music.play();
+
+  setTimeout(()=>{
+    envelopePage.style.display="none";
+    finalPage.style.display="block";
+    startHearts();
+    startPetals();
+  },1000);
+});
+
+/* Floating hearts */
+function startHearts(){
+  setInterval(()=>{
+    let h=document.createElement("div");
+    h.className="heart";
+    h.innerText=["💜","💖","🩵"][Math.floor(Math.random()*3)];
+    h.style.left=Math.random()*100+"vw";
+    h.style.animationDuration=(Math.random()*3+4)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+  },600);
+}
+
+/* Petals */
+function startPetals(){
+  setInterval(()=>{
+    let p=document.createElement("div");
+    p.className="petal";
+    p.innerText=["🪻","🌸","💙"][Math.floor(Math.random()*3)];
+    p.style.left=Math.random()*100+"vw";
+    p.style.animationDuration=(Math.random()*3+5)+"s";
+    document.body.appendChild(p);
+    setTimeout(()=>p.remove(),8000);
+  },700);
+}
+
+/* Kiss Burst */
+document.addEventListener("click",(e)=>{
+  if(finalPage.style.display==="block"){
+    for(let i=0;i<6;i++){
+      let k=document.createElement("div");
+      k.className="kiss";
+      k.innerText="💋";
+      k.style.left=(e.clientX+Math.random()*40-20)+"px";
+      k.style.top=(e.clientY+Math.random()*40-20)+"px";
+      document.body.appendChild(k);
+      setTimeout(()=>k.remove(),1000);
+    }
+  }
+});
+</script>
+
+</body>
+</html>
